@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote - Voting System</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function checkSession() {
+            fetch('SessionCheckServlet')
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.loggedIn) {
+                        window.location.href = "login.html";
+                    }
+                });
+        }
+        window.onload = checkSession;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Cast Your Vote</h2>
+        <form action="VoteServlet" method="POST">
+            <div>Select Candidate:</div>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="candidate" value="A" required>
+                    Candidate A
+                </label>
+                <label>
+                    <input type="radio" name="candidate" value="B" required>
+                    Candidate B
+                </label>
+            </div>
+            <button type="submit">Submit Vote</button>
+        </form>
+        <a href="LogoutServlet">Logout</a>
+    </div>
+</body>
+</html>
