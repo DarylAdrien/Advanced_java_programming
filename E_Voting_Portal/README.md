@@ -4,30 +4,47 @@
 
 The E-Voting Portal is a secure and user-friendly web application designed to facilitate online elections. This system aims to streamline the voting process, allowing registered users to cast their votes conveniently and transparently from anywhere. It supports various user roles, including voters, candidates, and administrators, ensuring a comprehensive election management system.
 
-![homepage](homepage.png)
+![homepage](./main/screenshots/homepage.png)
 
 ## Features
 
 **User Registration & Login**: Secure authentication for voters, candidates, and administrators.
-![register](register.png)
-![login](login.png)
-![otp](otp.png)
-**Role-Based Access Control**: Distinct functionalities and dashboards tailored to different user roles (Admin, Voter, Candidate).
-**Voter Management**: Administrators can manage voter details, including registration approval/rejection.
-![voter](voter_dashboard.png)
-**Candidate Management**: Administrators and candidates can manage candidate profiles and manifestos.
-![candidate](candidate_dashboard.png)
-![candidate_2](candidate_profile.png)
-**Election Management**: Administrators can create, configure, start, and end elections.
-![admin](election_result_view.png)
-**Secure Voting**: Registered voters can cast their votes in active elections.
-![post_vote](post_vote.png)
-**Real-time Results (Admin View)**: Administrators can view live election results.
-![admin_dashboard](admin_dashboard.png)
-**Public Election Summary**: Display of upcoming elections and recent results on the homepage 
-![homepage](results.png)
 
-![key_features](Screenshot 2025-05-30 232943.png)
+![register](./main/screenshots/register.png)
+
+![login](./main/screenshots/login.png)
+
+![otp](./main/screenshots/otp.png)
+
+**Role-Based Access Control**: Distinct functionalities and dashboards tailored to different user roles (Admin, Voter, Candidate).
+
+**Voter Management**: Administrators can manage voter details, including registration approval/rejection.
+
+![voter](./main/screenshots/voter_dashboard.png)
+
+**Candidate Management**: Administrators and candidates can manage candidate profiles and manifestos.
+
+![candidate](./main/screenshots/candidate_dashboard.png)
+
+![candidate_2](./main/screenshots/candidate_profile.png)
+
+**Election Management**: Administrators can create, configure, start, and end elections.
+
+![admin](./main/screenshots/election_result_view.png)
+
+**Secure Voting**: Registered voters can cast their votes in active elections.
+
+![post_vote](./main/screenshots/post_vote.png)
+
+**Real-time Results (Admin View)**: Administrators can view live election results.
+
+![admin_dashboard](./main/screenshots/admin_dashboard.png)
+
+**Public Election Summary**: Display of upcoming elections and recent results on the homepage 
+
+![homepage](./main/screenshots/results.png)
+
+![key_features](./main/screenshots/key_features.png)
 
 ## Technologies Used
 
@@ -55,54 +72,21 @@ Apache Tomcat: The web server and servlet container for deploying the applicatio
 
 Apache Maven / Apache Ant (or Eclipse Built-in): While not explicitly mentioned, typically used for project structure, dependency management, and building WAR files. (You can specify if you used Maven or Ant).
 
-
-## Project Structure (Common src/main/webapp and src/main/java layout)
-
-e-voting-portal/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── evoting/
-│   │   │           ├── controller/  (Servlets like LoginServlet, HomeServlet, etc.)
-│   │   │           ├── model/       (DAO classes, JavaBeans/POJOs)
-│   │   │           └── util/        (DBConnection, utility classes)
-│   │   └── webapp/
-│   │       ├── css/
-│   │       │   └── style.css
-│   │       ├── images/
-│   │       ├── js/
-│   │       │   └── script.js
-│   │       ├── WEB-INF/
-│   │       │   ├── jsp/
-│   │       │   │   ├── common/  (header.jsp, footer.jsp)
-│   │       │   │   ├── admin/
-│   │       │   │   ├── voter/
-│   │       │   │   └── candidate/
-│   │       │   └── web.xml        (Deployment descriptor)
-│   │       ├── index.jsp          (Homepage)
-│   │       ├── login.jsp          (Login page)
-│   │       └── register.jsp       (Registration page)
-├── lib/ (If you manually manage JARs; otherwise, Maven handles this)
-├── .gitignore
-├── pom.xml (If using Maven)
-└── README.md
-
-
 ## Setup and Installation
 
 Follow these steps to get the E-Voting Portal up and running on your local machine.
 
 ### Prerequisites
 
-**Java Development Kit (JDK)**: Version 8 or higher (e.g., JDK 8, JDK 11).
-**Apache Tomcat**: Version 7.0.x or higher (e.g., Tomcat 9.x, Tomcat 10.x recommended for newer JDKs).
-**Oracle Database**: An accessible Oracle instance (e.g., Oracle XE, or a full instance).
-**SQL Developer / SQL*Plus**: For database schema setup.
-**IDE (Integrated Development Environment)**: Eclipse IDE for Enterprise Java and Web Developers recommended.
-Database Setup
-**Connect to Oracle**: Use SQL Developer or SQL*Plus to connect to your Oracle database instance.
-**Create User (Optional but Recommended)**: Create a dedicated user for the application (e.g., EVOTING_USER).
+    **Java Development Kit (JDK)**: Version 8 or higher (e.g., JDK 8, JDK 11).
+    
+    **Apache Tomcat**: Version 7.0.x or higher (e.g., Tomcat 9.x, Tomcat 10.x recommended for newer JDKs).
+    **Oracle Database**: An accessible Oracle instance (e.g., Oracle XE, or a full instance).
+    **SQL Developer / SQL*Plus**: For database schema setup.
+    **IDE (Integrated Development Environment)**: Eclipse IDE for Enterprise Java and Web Developers recommended.
+    Database Setup
+    **Connect to Oracle**: Use SQL Developer or SQL*Plus to connect to your Oracle database instance.
+    **Create User (Optional but Recommended)**: Create a dedicated user for the application (e.g., EVOTING_USER).
 
 ## SQL
 
@@ -163,10 +147,9 @@ XML
 ## Application Deployment
 
 Clone the Repository:
-Bash
 
-git clone https://github.com/your-username/e-voting-portal.git
-cd e-voting-portal
+            git clone https://github.com/DarylAdrien/Advanced_java_programming.git
+            cd E_Voting_Portal
 
 Import into Eclipse:
 
@@ -203,13 +186,13 @@ SQL
 
 UPDATE users SET role = 'admin', status = 'approved' WHERE username = 'your_admin_username';
 COMMIT;
+
 Explore the different functionalities as a voter, candidate, or administrator.
-Contribution
-(Optional section, if you plan to accept contributions)
+
+## Contribution
 
 Feel free to fork this repository, make improvements, and submit pull requests.
 
 ## License
-(Optional: Choose a license like MIT, Apache 2.0, etc.)
 
 This project is licensed under the MIT License.
